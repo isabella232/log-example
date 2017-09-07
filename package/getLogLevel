@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl localhost:12345/v1/loglevel
