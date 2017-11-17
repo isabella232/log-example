@@ -3,18 +3,15 @@ package main
 import (
 	"time"
 
-	log "github.com/leodotcloud/log"
+	"github.com/leodotcloud/log"
 	"github.com/leodotcloud/log-example/one"
-	"github.com/leodotcloud/log-example/server"
 	"github.com/leodotcloud/log-example/two"
+	"github.com/leodotcloud/log/server"
 )
 
 func main() {
 
-	go func() {
-		s := server.Server{}
-		s.ListenAndServe("localhost:12345")
-	}()
+	server.StartServerWithDefaults()
 
 	one.Watch()
 	two.Watch()
