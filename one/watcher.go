@@ -3,7 +3,7 @@ package one
 import (
 	"time"
 
-	log "github.com/leodotcloud/log"
+	"github.com/leodotcloud/log"
 )
 
 // Watch ...
