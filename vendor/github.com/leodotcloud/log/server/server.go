@@ -24,9 +24,12 @@ func StartServerWithDefaults() {
 	s := Server{
 		SocketLocation: DefaultSocketLocation,
 	}
+	s.Start()
+}
 
+// Start the server
+func (s *Server) Start() {
 	os.Remove(s.SocketLocation)
-
 	go s.ListenAndServe()
 }
 
